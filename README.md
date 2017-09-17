@@ -1,4 +1,4 @@
-#Pong
+# Pong
 
 This is a re-make of the classic Pong game implemented in C++ using SFML for graphics and sound. No other external libraries were used.
 
