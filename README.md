@@ -27,7 +27,6 @@ All core features have been implemented and work correctly.
 ## Known Issues
 - Upon exiting, `AL lib` cleanup error messages are occasionally displayed in the terminal.
 - At high speeds, it is possible for the ball to travel through the paddle.
-- Use of deprecated method `setColor` on text objects.
 
 ## Lessons Learned / Things I Would Change
 

@@ -51,7 +51,7 @@ Pong::Pong() :
     };
 
     info.setFont(font);
-    info.setColor(sf::Color::Green);
+    info.setFillColor(sf::Color::Green);
     info.setCharacterSize(16);
     info.setPosition(0, 0);
 

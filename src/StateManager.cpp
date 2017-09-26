@@ -28,7 +28,7 @@ void StateManager::pop() {
 }
 
 void StateManager::Draw() {
-    for (int i = 0; i < states.size(); ++i) {
+    for (unsigned int i = 0; i < states.size(); ++i) {
         states[i]->Draw(window);
     }
 }

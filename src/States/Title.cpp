@@ -19,7 +19,7 @@ Title::Title(StateManager &sm, sf::Texture &t, sf::Font &f, sf::SoundBuffer &bou
     title.setPosition(400, 300);
     title.setStyle(sf::Text::Bold);
     title.setOrigin(title.getGlobalBounds().width / 2.0f, title.getGlobalBounds().height / 2.0f);
-    title.setColor(sf::Color::White);
+    title.setFillColor(sf::Color::White);
 
     addSelection("start", [&]() {
         stateManager.push(std::unique_ptr<State>(new Game(stateManager, font, bounceWallBuffer, bouncePaddleBuffer, scoreBuffer, mute, difficulty)));
@@ -51,7 +51,7 @@ Title::Title(StateManager &sm, sf::Texture &t, sf::Font &f, sf::SoundBuffer &bou
 
     cursor.setFont(font);
     cursor.setCharacterSize(selectionsCharacterSize);
-    cursor.setColor(sf::Color::White);
+    cursor.setFillColor(sf::Color::White);
     updateCursorPosition();
 
     flame.setTexture(spriteSheet);
@@ -62,9 +62,7 @@ Title::Title(StateManager &sm, sf::Texture &t, sf::Font &f, sf::SoundBuffer &bou
 
 }
 
-void Title::Update(const sf::Time elapsed) {
-
-}
+void Title::Update(const sf::Time elapsed) {}
 
 void Title::Draw(sf::RenderTarget &window) {
 
@@ -73,7 +71,7 @@ void Title::Draw(sf::RenderTarget &window) {
 
     window.draw(title);
     window.draw(cursor);
-    for (auto i = 0; i != selections.size(); ++i) {
+    for (unsigned int i = 0; i != selections.size(); ++i) {
         if (i == currentSelection) {
             selections[i].text.setStyle(sf::Text::Bold | sf::Text::Italic);
         } else {
@@ -130,7 +128,7 @@ int Title::addSelection(const std::string caption, const std::function<void()> s
     sf::Text text;
     text.setFont(font);
     text.setString(caption);
-    text.setColor(sf::Color::White);
+    text.setFillColor(sf::Color::White);
     text.setCharacterSize(selectionsCharacterSize);
 
     auto bounds = text.getGlobalBounds();

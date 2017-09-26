@@ -2,7 +2,7 @@
 #include "Pong.h"
 
 // Entry point to pong game.
-int main(int argc, char **argv)
+int main(void)
 {
     Pong pong;
     pong.Run();

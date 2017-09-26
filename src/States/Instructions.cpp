@@ -14,7 +14,7 @@ Instructions::Instructions(StateManager &sm, sf::Font &f) :
     title.setPosition(400, 100);
     title.setStyle(sf::Text::Bold);
     title.setOrigin(title.getGlobalBounds().width / 2, title.getGlobalBounds().height / 2);
-    title.setColor(sf::Color::White);
+    title.setFillColor(sf::Color::White);
     title.setStyle(sf::Text::Bold);
 
     std::vector<std::string> steps{
@@ -36,7 +36,7 @@ Instructions::Instructions(StateManager &sm, sf::Font &f) :
     instructions.setCharacterSize(16);
     instructions.setPosition(400, 300);
     instructions.setOrigin(instructions.getGlobalBounds().width / 2, instructions.getGlobalBounds().height / 2);
-    instructions.setColor(sf::Color::White);
+    instructions.setFillColor(sf::Color::White);
 
 
 }
